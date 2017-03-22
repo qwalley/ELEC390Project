@@ -1,0 +1,24 @@
+{
+  "name": "tbd",
+  "version": "1.0.0",
+  "description": "A Parody website of www.whitehouse.gov",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qwalley/ELEC390Project.git"
+  },
+  "author": "Will Alley, JP McCluskey, Jack East",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qwalley/ELEC390Project/issues"
+  },
+  "homepage": "https://github.com/qwalley/ELEC390Project#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "express": "^4.15.2",
+    "request": "^2.81.0"
+  }
+}
