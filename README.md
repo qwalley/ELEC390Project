@@ -12,6 +12,7 @@ willalley@Wills-MacBook-Pro:~/repo/ELEC390Project$ node -v
 v6.9.1
 ~~~~
 * clone the repository: `$git clone https://github.com/qwalley/ELEC390Project.git`
+* Navigate to the folder: `$cd ELEC390Project/`
 * install dependencies: `$npm install`
 * get to work!
 
