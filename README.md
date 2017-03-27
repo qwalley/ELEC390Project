@@ -6,13 +6,13 @@ This project will use Node.js to run a web application that scrapes pages from t
 words for much sillier ones and then host the new pages on the parody website.
 
 ## Getting Started
-1. Verify that you have Node.js installed. In your terminal try:
-  ~~~~
-  willalley@Wills-MacBook-Pro:~/repo/ELEC390Project$ node -v
-  v6.9.1
-  ~~~~
+* Verify that you have Node.js installed. In your terminal try the following command:
   If the command does not output "v6.something.something" google how to get the latest version of Node.js
-
-2. clone repo: `$git clone https://github.com/qwalley/ELEC390Project.git`
-3. install dependencies: `$npm install`
+~~~~
+willalley@Wills-MacBook-Pro:~/repo/ELEC390Project$ node -v
+v6.9.1
+~~~~
+* clone the repository: `$git clone https://github.com/qwalley/ELEC390Project.git`
+* install dependencies: `$npm install`
+* get to work!
 
