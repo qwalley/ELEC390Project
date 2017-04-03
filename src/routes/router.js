@@ -5,9 +5,12 @@ const express = require('express');
 const router = express.Router();
 const anotherpageController = require('../controllers/anotherpage.controller.js');
 const homeController = require('../controllers/home.controller.js');
+const scrapeController = require('../controllers/webscrape.controller.js');
 
 router.get('/', homeController);
 
 router.get('/anotherpage', anotherpageController);
+
+router.get('/update', scrapeController);
 
 module.exports = router;
