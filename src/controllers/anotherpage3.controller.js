@@ -1,14 +1,14 @@
-// filename: anotherpage.controller.js
+// filename: anotherpage2.controller.js
 // author: Will Alley
 
 const express = require('express');
 const spawn = require('child_process').spawn;
 
-module.exports = function anotherpageController(req, res) {
+module.exports = function anotherpage3Controller(req, res) {
 
 	article = {
-		title: 'Remarks by Supreme Leader Trump and Supreme Leader Al-Sisi of Egypt Before Bilateral Meeting',
-		URL: 'https://www.whitehouse.gov/the-press-office/2017/04/03/remarks-president-trump-and-president-al-sisi-egypt-bilateral-meeting',
+		title: 'Remarks by Supreme Leader Trump et al. at Signing of Trade Executive Orders',
+		URL: 'https://www.whitehouse.gov/the-press-office/2017/03/31/remarks-president-trump-et-al-signing-trade-executive-orders',
 		body: ''
 	};
 	

@@ -23,42 +23,6 @@ module.exports = function (req, res) {
 	});
 
 	URLScraper.on('close', (code) => {
-		article = {
-			title: '',
-			URL: URLs[0],
-			body: ''
-		};
-		// spawn a scraper to find the title
-		const articleScraper = spawn('python', ['webscraper.py', 'title', article.URL]);
-
-		articleScraper.stdout.on('data', (data) => {
-		article.title = data.toString();
-		});
-
-		articleScraper.stderr.on('data', (data) => {
-			console.log(data.toString());
-		});
-
-		articleScraper.on('close', (code) => {
-			// spawn a scraper for the body of the article
-			const articleScraper = spawn('python', ['webscraper.py', 'article', article.URL]);
-
-			articleScraper.stdout.on('data', (data) => {
-			article.body = data.toString();
-			});
-
-			articleScraper.stderr.on('data', (data) => {
-				console.log(data.toString());
-			});
-
-			articleScraper.on('close', (code) => {
-				res.render('anotherpage', {
-					helpers: {
-						title: function () { return article.title; },
-						text: function () { return article.body; }
-					}
-				});
-		});
-		});
+		res.send('1: ' + URLs[0] + ' 2: ' + URLs[1] + ' 3: ' + URLs[2]);
 	});
 }
