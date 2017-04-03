@@ -19,7 +19,7 @@ module.exports = function (req, res) {
 	// log errors to console
 	URLScraper.stderr.on('data', (data) => {
 		result = data.toString();
-		consonle.log(result);
+		console.log(result);
 	});
 
 	URLScraper.on('close', (code) => {
@@ -53,7 +53,7 @@ module.exports = function (req, res) {
 
 			// log errors to console
 			title2Scraper.stderr.on('data', (data) => {
-				consonle.log(data.toString());
+				console.log(data.toString());
 			});
 
 			title2Scraper.on('close', (code) => {
@@ -68,7 +68,7 @@ module.exports = function (req, res) {
 
 				// log errors to console
 				title3Scraper.stderr.on('data', (data) => {
-					consonle.log(data.toString());
+					console.log(data.toString());
 				});
 
 				title3Scraper.on('close', (code) => {
