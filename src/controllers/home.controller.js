@@ -19,15 +19,14 @@ module.exports = function (req, res) {
 	// log errors to console
 	URLScraper.stderr.on('data', (data) => {
 		result = data.toString();
-		consonle.log(result);
+		console.log(result);
 	});
 
 	URLScraper.on('close', (code) => {
 		var titles = {
 			title1: '',
 			title2: '',
-			title3: '',
-			title4: ''
+			title3: ''
 		};
 		const title1Scraper = spawn('python', ["webscraper.py", 'title', URLs[0]]);
 		var result1
