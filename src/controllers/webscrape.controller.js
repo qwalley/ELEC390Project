@@ -52,7 +52,12 @@ module.exports = function (req, res) {
 			});
 
 			articleScraper.on('close', (code) => {
-				res.send(article.title + ': ' + article.URL + ': ' + article.body);
+				res.render('anotherpage', {
+					helpers: {
+						title: function () { return article.title; },
+						text: function () { return article.body; }
+					}
+				});
 		});
 		});
 	});

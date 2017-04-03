@@ -7,6 +7,12 @@ const path = require('path');
 const routes = require('./routes/router');
 
 const app = express();
+/*const hbs = exhbs.create({
+	helpers: {
+		title: function () { return 'title!'; },
+		body: function () { return 'article body!'; }
+	}
+}); */
 
 app.set('views', __dirname + '/views');
 app.engine('handlebars', exphbs({defaultLayout: 'main', layoutsDir: __dirname + '/views/layouts'}));

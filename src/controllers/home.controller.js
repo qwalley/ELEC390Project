@@ -1,6 +1,28 @@
 // filename: home.controller.js
 // author: Will Alley
 
-module.exports = function homeController(req, res) {
-	res.render('home');
+const express = require('express');
+const spawn = require('child_process').spawn;
+
+
+module.exports = function (req, res) {
+	// start scraper for list of articles
+	const URLScraper = spawn('python', ["webscraper.py", 'links']);
+	var result, URLs;
+
+	// on success parse into array
+	URLScraper.stdout.on('data', (data) => {
+		result = data.toString();
+		URLs = result.split(',');
+	});
+
+	// log errors to console
+	URLScraper.stderr.on('data', (data) => {
+		result = data.toString();
+		consonle.log(result);
+	});
+
+	URLScraper.on('close', (code) => {
+
+	});
 }

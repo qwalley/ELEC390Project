@@ -87,6 +87,7 @@ elif command == 'article':
 elif command == 'title':
 	URL = sys.argv[2]
 	title = getTitle(URL)
+	title = replaceWords(title)
 	print title
 	sys.stdout.flush()
 
