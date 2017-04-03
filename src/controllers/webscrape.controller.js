@@ -22,22 +22,38 @@ module.exports = function (req, res) {
 		consonle.log(result);
 	});
 
-	// once finished spawn scraper for the links collected
 	URLScraper.on('close', (code) => {
-		const articleScraper = spawn('python', ['webscraper.py', 'article', URLs[0]]);
-		var text;
+		article = {
+			title: '',
+			URL: URLs[0],
+			body: ''
+		};
+		// spawn a scraper to find the title
+		const articleScraper = spawn('python', ['webscraper.py', 'title', article.URL]);
 
 		articleScraper.stdout.on('data', (data) => {
-		text = data.toString();
+		article.title = data.toString();
 		});
 
 		articleScraper.stderr.on('data', (data) => {
-			text = data.toString();
-			console.log(text);
+			console.log(data.toString());
 		});
 
 		articleScraper.on('close', (code) => {
-			
+			// spawn a scraper for the body of the article
+			const articleScraper = spawn('python', ['webscraper.py', 'article', article.URL]);
+
+			articleScraper.stdout.on('data', (data) => {
+			article.body = data.toString();
+			});
+
+			articleScraper.stderr.on('data', (data) => {
+				console.log(data.toString());
+			});
+
+			articleScraper.on('close', (code) => {
+				res.send(article.title + ': ' + article.URL + ': ' + article.body);
+		});
 		});
 	});
 }

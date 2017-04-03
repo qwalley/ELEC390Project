@@ -5,6 +5,13 @@ import requests
 import sys
 from BeautifulSoup import BeautifulSoup
 
+def getTitle (url):
+	response = requests.get(url)
+	html = response.content
+	soup = BeautifulSoup(html)
+	title = soup.find('div', attrs={'class': 'panel-pane pane-node-title'})
+	return title
+
 def getArticles (mainURL):
 	response = requests.get(mainURL)
 	html = response.content
@@ -76,6 +83,11 @@ elif command == 'article':
 	URL = sys.argv[2]
 	article = processArticle(URL)
 	print article
+	sys.stdout.flush()
+elif command == 'title':
+	URL = sys.argv[2]
+	title = getTitle(URL)
+	print title
 	sys.stdout.flush()
 
 
