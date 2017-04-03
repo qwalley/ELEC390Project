@@ -1,7 +1,31 @@
 <!-- filename: anotherpage.handlebars -->
 <!-- authors: Will Alley -->
 
-<body>
-<p>This is another page</p>
-<a href="/">Home</a>
-</body>
+
+<!DOCTYPE html>
+      <div id="content-start" class="panel-panel panel-col panel-col-section-content" tabindex="-1">
+       <div class="panel-pane pane-custom pane-1 clearfix" >
+      <div class="videos-intro-field videos-intro-forall-body forall-body">
+      <div class="whr-read-more-wrapper">
+        <div class="press-article-header-wrapper">
+  <div id="press_article_heading" class="press-article-heading">
+    <div id="press_article_heading_title" class="heading-title">The White House</div>
+    <div id="press_article_heading_subtitle" class="heading-subtitle">Office of the Press Secretary</div>
+  </div>
+  <div id="press_article_subheading" class="clearfix press-article-subheading">
+    <div id="press_article_immediate_release" class="press-article-release">For Immediate Release</div>
+    <div id="press_article_date_created" class="press-article-date">{{Speeches.date}}</div>
+  </div>
+</div>      </div>
+    </div>
+  </div>
+<div class="panel-pane pane-node-title" >
+  
+  <h1>{{Speeches.title}}</h1>
+
+  </div>
+<div class="panel-pane pane-entity-field pane-node-field-forall-body" >
+  
+      {{Speeches.speech}}
+      </div>
+</html> 
