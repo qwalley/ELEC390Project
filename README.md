@@ -27,7 +27,7 @@ willalley@Wills-MacBook-Pro:~/repo/ELEC390Project$ pip -V
 pip 9.0.1 from /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7)
 ~~~~
 * If you are missing pip on your system, consult the [pip installation guide](http://docs.python-requests.org/en/master/user/install/)
-* use pip to install Python's request module
+* use pip to install the request and Beautifulsoup module
 
 * clone the repository: `$git clone https://github.com/qwalley/ELEC390Project.git`
 * navigate to the folder: `$cd ELEC390Project/`
